@@ -1,0 +1,157 @@
+---
+title: "Themes"
+description: "Toggle light/dark mode and customize design tokens."
+---
+
+## Overview
+
+LiteDocs uses `next-themes` to manage color themes and Tailwind CSS design tokens. The provider is configured in `src/app/layout.tsx`, which sets the `class` attribute for theme toggling.
+
+## Quick Start
+
+Add a ready-to-use theme toggle anywhere:
+
+```tsx
+import ThemeButton from "@/components/theme-button";
+
+export default function Example() {
+  return (
+    <div className="flex items-center gap-2">
+      <ThemeButton />
+    </div>
+  );
+}
+```
+
+The Navbar already includes a `ThemeButton`, so you can use the page header to toggle themes.
+
+## How It Works
+
+- Provider setup:
+
+```tsx
+// src/app/layout.tsx (excerpt)
+import { ThemeProvider } from "next-themes";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class">
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+- CSS dark variant (for raw CSS selectors) is defined in `globals.css`:
+
+```css
+/* src/app/globals.css (excerpt) */
+@custom-variant dark (&:is(.dark *));
+```
+
+This makes `dark:` utilities available in Tailwind and enables `.dark` scoping for plain CSS.
+
+## Customize Colors
+
+Design tokens are centralized in `:root` inside `globals.css`. Update them to change the site palette:
+
+```css
+/* src/app/globals.css (excerpt) */
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.13 0.028 261.692);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.028 261.692);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.13 0.028 261.692);
+  --primary: oklch(0.21 0.034 264.665);
+  --primary-foreground: oklch(0.985 0.002 247.839);
+  --secondary: oklch(0.967 0.003 264.542);
+  --secondary-foreground: oklch(0.21 0.034 264.665);
+  --muted: oklch(0.967 0.003 264.542);
+  --muted-foreground: oklch(0.551 0.027 264.364);
+  --accent: oklch(0.967 0.003 264.542);
+  --accent-foreground: oklch(0.21 0.034 264.665);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.928 0.006 264.531);
+  --input: oklch(0.928 0.006 264.531);
+  --ring: oklch(0.707 0.022 261.325);
+}
+```
+
+There is also an inline theme section that maps common UI variables:
+
+```css
+/* src/app/globals.css (excerpt) */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-roboto-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+}
+```
+
+Adjust these tokens to tailor the theme across the entire app.
+
+## Base Color (Tailwind)
+
+Change Tailwind’s base color family in `components.json` to slightly shift default accents:
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "tailwind": {
+    "css": "src/app/globals.css",
+    "baseColor": "gray",
+    "cssVariables": true
+  }
+}
+```
+
+For example, set `"baseColor": "blue"` or `"neutral"` depending on your brand.
+
+## Dark Mode Utilities
+
+Use Tailwind’s `dark:` prefix to style elements differently in dark mode:
+
+```tsx
+export function Card() {
+  return (
+    <div className="bg-card text-card-foreground dark:bg-neutral-900 dark:text-neutral-100 rounded-lg p-4">
+      <h3 className="font-semibold">Card</h3>
+      <p className="text-muted-foreground dark:text-neutral-300">Content goes here.</p>
+    </div>
+  );
+}
+```
+
+## Accessibility
+
+- The toggle button includes `aria-label="Theme Button"`.
+- `suppressHydrationWarning` in the `<html>` tag helps avoid hydration mismatches on initial theme.
+
+## Notes
+
+- This page’s slug resolves to `components/theme` based on file path. Ensure the sidebar link matches this slug.
