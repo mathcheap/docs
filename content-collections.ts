@@ -15,7 +15,7 @@ import { z } from "zod";
 
 const pages = defineCollection({
   name: "pages",
-  directory: "src/content",
+  directory: "content",
   include: "**/*.mdx",
   schema: z.object({
     title: z.string(),
