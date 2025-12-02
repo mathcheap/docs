@@ -17,7 +17,7 @@ const components = {
 }
 
 export default async function HomePage() {
-  const page = allPages.find((p: Page) => p.slug === "introduction");
+  const page = allPages.find((p: Page) => p.slug === "overview");
   if (page) {
     const toc = await getTableOfContents(page.content)
     return (
