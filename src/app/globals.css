@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -18,7 +17,7 @@ html {
 
 .prose h1 {
   color: var(--foreground);
-  font-weight: 700;
+  font-weight: 900;
   font-size: 2.25rem;
   line-height: 2.5rem;
   margin-bottom: 1rem;
@@ -26,12 +25,11 @@ html {
 
 .prose h2 {
   color: var(--foreground);
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.5rem;
   line-height: 2.25rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 700;
 }
 
 .prose h3 {
@@ -80,15 +78,23 @@ html {
   padding: 0;
 }
 
-.prose ul,
+.prose ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  color: var(--muted-foreground);
+  list-style-type: disc;
+}
+
 .prose ol {
   margin: 1rem 0;
   padding-left: 1.5rem;
+  color: var(--muted-foreground);
+  list-style-type: decimal;
 }
 
 .prose li {
   margin: 0.5rem 0;
-  list-style-type: disc;
+  color: var(--muted-foreground);
 }
 
 .prose blockquote {
@@ -125,6 +131,11 @@ html {
 .prose th {
   background-color: var(--muted);
   font-weight: 600;
+}
+
+.prose b,
+.prose strong {
+  color: black;
 }
 
 @theme inline {
