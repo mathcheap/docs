@@ -10,7 +10,7 @@ import {
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { sidebarNavLinks, type SidebarItem } from "@/data/meta-data";
+import { sidebarNavLinks, type SidebarItem, DocsPage } from "@/data/meta-data";
 
 import {
   Sidebar,
@@ -35,10 +35,10 @@ function SidebarSection({
       <Link
         href={item.href}
         className={cn(
-          "flex items-center gap-2 px-3 py-2 text-sm rounded",
-          "hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-accent-foreground text-gray-600 dark:text-gray-300 dark:hover:text-white",
+          "flex items-center gap-2 py-2 text-base rounded",
+          "hover:text-black text-slate-600 dark:text-slate-300 dark:hover:text-white hover:underline",
           currentPath === item.href &&
-          "bg-gray-200 text-accent-foreground dark:bg-gray-800 dark:hover:text-white",
+          "text-black dark:text-white dark:hover:text-white underline",
         )}
       >
         {item.title}
@@ -49,7 +49,7 @@ function SidebarSection({
   return (
     <SidebarGroupContent>
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <CollapsibleTrigger asChild>
+        {/* <CollapsibleTrigger asChild>
           <button className="flex items-center select-none justify-between w-full py-2 text-sm">
             <span>{item.title}</span>
             {hasItems &&
@@ -59,7 +59,7 @@ function SidebarSection({
                 <ChevronRight className="h-4 w-4" />
               ))}
           </button>
-        </CollapsibleTrigger>
+        </CollapsibleTrigger> */}
         {hasItems && (
           <CollapsibleContent className="space-y-1">
             {item.items?.map((subItem, index) => (
@@ -80,23 +80,24 @@ export function AppSidebar() {
   const currentPath = usePathname();
   return (
     <Sidebar>
-      <aside className="h-full w-68 fixed border-r bg-gray-50 dark:bg-black divide-y flex flex-col shrink-0">
-        <SidebarHeader className="flex flex-row h-16 justify-between min-h-16 items-center px-8 py-0">
+      <aside className="h-full w-68 fixed border-r bg-slate-50 dark:bg-black divide-y flex flex-col shrink-0">
+        <SidebarHeader className="flex flex-row h-16 min-h-16 items-center px-8 py-0">
           <Link
             href="/"
             className="flex items-center gap-x-1 sticky top-0"
-            title="LiteDocs"
+            title={DocsPage.title}
+            noBasePath
           >
             <Logo />
-            <h2 className="text-xl font-extrabold hover:text-gray-900 dark:hover:text-gray-100">
-              LiteDocs
+            <h2 className="text-xl font-extrabold hover:text-slate-950 dark:hover:text-slate-100">
+              {DocsPage.title}
             </h2>
           </Link>
           <Link
-            href="/overview/changelog"
-            className="text-sm text-gray-600 dark:text-gray-300"
+            href="/changelog"
+            className="text-sm text-slate-600 dark:text-slate-300"
           >
-            v.0.1.0
+            {`v${DocsPage.version}`}
           </Link>
         </SidebarHeader>
         <SidebarContent>
