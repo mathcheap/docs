@@ -1,16 +1,18 @@
-# LiteDocs
+# Mathcheap Documentation
 
-LiteDocs is built with Tailwind CSS, MDX and Next.js, and it is designed to be easy to use and customize.
+Visit https://mathcheap.xyz/docs to view the documentation.
 
-## Documentation
+This documentation is built with the [LiteDocs](https://github.com/shenlu89/litedocs) template.
 
-Visit https://litedocs-livid.vercel.app to view the documentation.
+## Deploy with Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mathcheap/docs)
 
 ## Contributing
 
-We welcome contributions to LiteDocs. Please read our
-[contributing guidelines](https://github.com/shenlu89/litedocs/blob/master/CONTRIBUTING.md) for more information on how to
+We welcome contributions to Mathcheap. Please read our
+[contributing guidelines](https://github.com/mathcheap/docs/blob/main/CONTRIBUTING.md) for more information on how to
 contribute.
 
 ## License
-Licensed under the [MIT License](https://github.com/shenlu89/litedocs/blob/master/LICENSE).
+Licensed under the [MIT License](https://github.com/mathcheap/docs/blob/main/LICENSE).
