@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 import { withContentCollections } from "@content-collections/next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: process.env.NODE_ENV === "production" ? "/docs" : undefined,
+  reactStrictMode: true,
 };
 
 // withContentCollections must be the outermost plugin
