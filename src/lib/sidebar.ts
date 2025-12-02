@@ -26,7 +26,7 @@ export function getNavigationPages(currentSlug: string) {
   const allPages = flattenSidebar(sidebarNavLinks);
 
   // Handle special case for introduction page
-  if (currentSlug === "introduction") {
+  if (currentSlug === "overview") {
     return {
       prev: null,
       next: allPages.length > 0 ? allPages[0] : null,
@@ -45,7 +45,7 @@ export function getNavigationPages(currentSlug: string) {
     prev:
       currentIndex > 0
         ? allPages[currentIndex - 1]
-        : { title: "Introduction", href: "/" },
+        : { title: "Overview", href: "/" },
     next:
       currentIndex < allPages.length - 1 ? allPages[currentIndex + 1] : null,
   };
