@@ -1,8 +1,29 @@
+const HeaderNavLinks = [
+  {
+    title: "Documentation",
+    href: "/docs",
+  },
+  // {
+  //   title: "Blog",
+  //   href: "/blog",
+  // },
+];
+
+
+const DocsPage = {
+  metadata: { title: "Docs", description: "Documentation for Mathcheap" },
+  title: "Mathcheap",
+  version: "0.11.0",
+};
+
+export { DocsPage, HeaderNavLinks };
+
 export interface SidebarItem {
   title: string;
   href?: string;
   items?: SidebarItem[];
 }
+
 
 /**
  * Sidebar navigation configuration
@@ -13,34 +34,21 @@ export const sidebarNavLinks: SidebarItem[] = [
     title: "Overview",
     items: [
       {
+        title: "Introduction",
+        href: "/introduction",
+      },
+      {
         title: "Getting Started",
-        href: "/overview/getting-started",
+        href: "/getting-started",
       },
       {
         title: "Changelog",
-        href: "/overview/changelog",
+        href: "/changelog",
       },
       {
         title: "About",
-        href: "/overview/about",
+        href: "/about",
       },
     ],
-  },
-  {
-    title: "Components",
-    items: [
-      {
-        title: "Themes",
-        href: "/components/themes",
-      },
-      {
-        title: "Code Block",
-        href: "/components/code-block",
-      },
-      {
-        title: "Table of Contents",
-        href: "/components/table-of-contents",
-      },
-    ],
-  },
+  }
 ];
