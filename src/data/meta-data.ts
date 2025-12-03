@@ -1,4 +1,4 @@
-const HeaderNavLinks = [
+export const HeaderNavLinks = [
   {
     title: "Documentation",
     href: "/docs",
@@ -9,14 +9,53 @@ const HeaderNavLinks = [
   // },
 ];
 
-
-const DocsPage = {
-  metadata: { title: "Docs", description: "Documentation for Mathcheap" },
+export const DocsPage = {
+  metadata: {
+    metadataBase: new URL("https://mathcheap.xyz/docs"),
+    title: {
+      default: "Mathcheap Documentation",
+      template: `%s | Mathcheap Documentation`,
+    },
+    description:
+      "Mathcheap Documentation",
+    keywords: [
+      "LiteDocs",
+      "Documentation Template",
+      "Mathcheap Documentation",
+      "MDX Documentation",
+      "Open Source Documentation",
+    ],
+    openGraph: {
+      title: "Mathcheap",
+      description:
+        "Mathcheap Documentation",
+      url: "https://mathcheap.xyz/docs",
+      siteName: "Mathcheap",
+      locale: "en-US",
+      type: "website",
+    },
+    twitter: {
+      title: "Mathcheap",
+      card: "summary_large_image",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-snippet": -1,
+      },
+    },
+  },
   title: "Mathcheap",
   version: "0.11.0",
+  description:
+    "Mathcheap Documentation",
+  url: "https://mathcheap.xyz/docs",
+  avatar_url: "/images/logo.svg",
 };
-
-export { DocsPage, HeaderNavLinks };
 
 export interface SidebarItem {
   title: string;

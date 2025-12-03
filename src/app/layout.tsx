@@ -1,6 +1,10 @@
 import { Cantarell } from "@/lib/fonts";
 import { ThemeProvider } from 'next-themes'
 import "./globals.css";
+import { DocsPage } from "@/data/meta-data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = DocsPage.metadata
 
 export default function RootLayout({
   children,
