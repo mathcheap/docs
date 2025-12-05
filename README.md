@@ -4,7 +4,7 @@ Visit https://mathcheap.xyz/docs to view the documentation.
 
 This documentation is built with the [LiteDocs](https://github.com/shenlu89/litedocs) template.
 
-## Deploy with Vercel
+## Deploy on Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mathcheap/docs)
 
