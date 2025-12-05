@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 import { withContentCollections } from "@content-collections/next";
 
 const nextConfig: NextConfig = {
-  basePath: "/docs",
+  basePath: process.env.NODE_ENV === "production" ? "/docs" : undefined,
   reactStrictMode: true,
 };
 
