@@ -1,29 +1,21 @@
 import Link from "next/link";
 
 const CustomLink = (props: any) => {
-  const { href, noBasePath, ...rest } = props;
+  const { href } = props;
 
   if (href.startsWith("#")) {
-    return <a href={href} {...rest} />;
+    return <a {...props} />;
   }
-
-  if (noBasePath) {
-    return <a href={href} {...rest} />;
-  }
-
   if (!href.startsWith("/")) {
-    return (
-      <Link
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        prefetch={false}
-        {...rest}
-      />
-    );
+    props = {
+      target: "_blank",
+      rel: "noopener noreferrer",
+      prefetch: false,
+      ...props,
+    };
   }
 
-  return <Link href={href} {...rest} />;
+  return <Link {...props} />;
 };
 
 export default CustomLink;
