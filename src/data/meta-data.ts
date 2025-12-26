@@ -50,7 +50,7 @@ export const DocsPage = {
     },
   },
   title: "Mathcheap",
-  version: "0.11.1",
+  version: "0.11.2",
   description:
     "Mathcheap Documentation",
   url: "https://mathcheap.xyz/docs",
