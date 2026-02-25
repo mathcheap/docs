@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { sidebarNavLinks, type SidebarItem, DocsPage } from "@/data/meta-data";
+import { DocsLogo } from "@/components/docs/logo";
 
 import {
   Sidebar,
@@ -93,12 +94,9 @@ export function AppSidebar() {
               {DocsPage.title}
             </h2>
           </Link>
-          <Link
-            href="/changelog"
-            className="text-sm text-slate-600 dark:text-slate-300"
-          >
-            {`v${DocsPage.version}`}
-          </Link>
+          <span className="text-slate-600 dark:text-slate-300">
+            / docs
+          </span>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup className="py-2 px-8">
@@ -111,6 +109,7 @@ export function AppSidebar() {
             ))}
           </SidebarGroup>
         </SidebarContent>
+        {/* <div className="flex py-4 px-8 absolute bottom-0 text-sm justify-center items-center w-full text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-black space-x-1"><span className="text-xs">Built with</span><DocsLogo /><Link href="https://github.com/shenlu89/litedocs" className="font-extrabold hover:text-black dark:hover:text-white underline-offset-3">LiteDocs</Link></div> */}
       </aside>
     </Sidebar>
   );
