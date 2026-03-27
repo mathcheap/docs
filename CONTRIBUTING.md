@@ -1,31 +1,34 @@
-# Contributing to LiteDocs
+> **Customize this file**: Tailor this template to your project by noting specific contribution types you're looking for, adding a Code of Conduct, or adjusting the writing guidelines to match your style.
 
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+# Contribute to the documentation
 
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
-- Becoming a maintainer
+Thank you for your interest in contributing to our documentation! This guide will help you get started.
 
-## Report bugs using Github's [issues](https://github.com/shenlu89/litedocs/issues)
+## How to contribute
 
-We use GitHub issues to track public bugs. Report a bug by
-[opening a new issue](https://github.com/shenlu89/litedocs/issues/new); it's that easy!
+### Option 1: Edit directly on GitHub
 
-## License
+1. Navigate to the page you want to edit
+2. Click the "Edit this file" button (the pencil icon)
+3. Make your changes and submit a pull request
 
-By contributing, you agree that your contributions will be licensed under its
-[License](https://github.com/shenlu89/litedocs/blob/main/LICENSE).
+### Option 2: Local development
 
-## Discuss changes before starting to work on them
+1. Fork and clone this repository
+2. Install the Mintlify CLI: `npm i -g mint`
+3. Create a branch for your changes
+4. Make changes
+5. Navigate to the docs directory and run `mint dev`
+6. Preview your changes at `http://localhost:3000`
+7. Commit your changes and submit a pull request
 
-Please first discuss the change you wish to make via issue, email, or any other method with the owners of this
-repository before making a change. This helps everyone to be on the same page and makes the chances of your
-contributions being integrated into the project much higher.
+For more details on local development, see our [development guide](development.mdx).
 
-## Do a self-review before requesting a review from others
+## Writing guidelines
 
-Before requesting a review for your pull request, do a self-review. Go through your code additions and make sure they
-follow the coding practices and guidelines of the project. This helps to streamline the review process and reduce the
-iteration cycles of review.
+- **Use active voice**: "Run the command" not "The command should be run"
+- **Address the reader directly**: Use "you" instead of "the user"
+- **Keep sentences concise**: Aim for one idea per sentence
+- **Lead with the goal**: Start instructions with what the user wants to accomplish
+- **Use consistent terminology**: Don't alternate between synonyms for the same concept
+- **Include examples**: Show, don't just tell
