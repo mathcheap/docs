@@ -1,0 +1,353 @@
+---
+title: "Changelog"
+description: "Latest new features, improvements, and bug fixes in Mathcheap."
+---
+
+## v0.12.0 (2026-03-26)
+
+**New features**
+
+- Adjusted the recognition modes to output in two formats: Markdown and LaTeX.
+
+**improvements**
+
+- Updated Mixed Mode so that mixed content (text, formulas, and tables) is output in Markdown format.
+- Added Markdown and LaTeX support for the Collection and History buttons.
+
+## v0.11.11 (2026-03-11)
+
+**New features**
+
+- Added an Auto Mode so you no longer need to manually switch recognition modes.
+- Added a Mixed Mode to recognize mixed content including text, formulas, and tables.
+- Added more providers (Vercel AI Gateway, Gemini, and OpenRouter), allowing you to switch to BYOK mode after the free credits run out.
+
+## v0.11.10 (2026-03-07)
+
+**New features**
+
+- Added a dedicated Copy button for Table Mode.
+
+**Fixes**
+
+- Fixed an issue where History and Collection couldn’t preview mixed text.
+
+**improvements**
+
+- Enabled direct preview of recognized content in Table Mode , without needing to jump to Overleaf.
+
+## v0.11.9 (2026-03-02)
+
+**New features**
+
+- Added a Table Mode to specifically convert images containing tables into LaTeX format.
+
+**Fixes**
+
+- Fixed an issue where the Copy button style was inconsistent with other buttons.
+
+**improvements**
+
+- Upgraded the prompt system.
+
+## v0.11.8 (2026-02-25)
+
+**New features**
+
+- Added Stack and Split screen layout modes.
+- Added a Clear button to the Image (OCR) panel to clear the editor, upload, and preview panels with one click.
+
+**Fixes**
+
+- Fixed the Import from URL button not recognizing WEBP images.
+
+**improvements**
+
+- Changed Import from URL from an inline display to a dialog modal.
+- Updated the Image (OCR) panel layout to better match the overall app style.
+
+## v0.11.7 (2026-02-09)
+
+**New features**
+
+- Replaced static layout with resizable panels.
+- Added LaTeX logo SVG component
+
+**improvements**
+
+- Improved LaTeX logo in preview panel and image in OCR panels responsiveness when resizing panels
+
+
+## v0.11.6 (2026-01-19)
+
+**New features**
+
+- Added Terms of Service and Privacy Policy pages, with footer links
+- Updated OCR endpoint to route through /api/proxy
+
+**Breaking changes**
+
+- Upgraded the AI prompt to better recognize multi-line equations and extract formulas from mixed text-and-math content.
+
+**Fixes**
+
+- Fixed collection button storage bar color thresholds/background
+- Fixed align environment line break handling
+
+**improvements**
+
+- Refactored layout/page container and updated URL import UI (icon/tooltip)
+- Improved SVG preview responsiveness
+
+## v0.11.5 (2026-01-09)
+
+**New features**
+
+- Add Perplexity integration option
+- Add Qwen integration to share options
+- Add URL input for image upload
+- Add TeX export option
+- Add icon support to select options
+
+**Breaking changes**
+
+- Move Symbols and Formula button into LaTeX editor panel
+
+**Fixes**
+
+- Sync editor content with text prop changes
+- improve pointer event handling in QR dialog for share button
+- Wrap cancel button in tooltip for better UX
+
+**improvements**
+
+- Replace custom modal with Dialog component for share button
+- Restructure settings panel with model management and tabs for settings panel
+- Improve styling and accessibility
+- Remove redundant transition-colors classes
+- Adjust colors for better dark mode consistency
+
+## v0.11.4 (2025-12-31)
+
+**New features**
+
+- [Added dark mode theme](https://x.com/mathcheap/status/2006281552834002978)
+
+## v0.11.3 (2025-12-27)
+
+**New features**
+
+- [Added AI-powered LaTeX math explanations leveraging ChatGPT and Claude](https://x.com/mathcheap/status/2004801588104433850)
+
+**improvements**
+
+- Moved the Overleaf button into the share button
+- Added semantic icons to the Share button to improve clarity
+
+## v0.11.2 (2025-12-26)
+
+**improvements**
+
+- [Refactored settings UI design](https://x.com/mathcheap/status/2004419968923062729)
+
+## v0.11.1 (2025-12-24)
+
+**improvements**
+
+- [Fixed the logic issues in the interactions between the Redo, Undo, and Clear buttons](https://x.com/mathcheap/status/2003803840521634160)
+
+## v0.11.0 (2025-12-01)
+
+**New release**
+
+- [Mathcheap documentation](https://github.com/mathcheap/docs) is open-sourced
+- [pandoc-wasm](https://github.com/mathcheap/pandoc-wasm) is transferred from [shenlu89](https://github.com/shenlu89) to [Mathcheap](https://github.com/mathcheap)
+
+**improvements**
+
+- Unified the header style of the official website and the documentation
+
+## v0.10.5 (2025-10-06)
+
+**New features**
+
+- [Add incognito mode for image recognition, which prevents search history from being saved and is automatically enabled when storage is full](https://x.com/mathcheap/status/1975207809819283901)
+
+**improvements**
+
+- Fix and optimzie LaTeX editor configuration
+
+## v0.10.4 (2025-09-24)
+
+**improvements**
+
+- [Optimize the tooltip to ensure the displayed content stays within the application](https://x.com/mathcheap/status/1970839427174859045)
+
+## v0.10.3 (2025-09-17)
+
+**improvements**
+
+- [Optimized the editor/preview layout to enforce a 50/50 split with per-panel scrolling, fixing double scrollbars and height overflow issues](https://x.com/mathcheap/status/1968190878297755801)
+
+## v0.10.2 (2025-09-12)
+
+**improvements**
+
+- Move the DOCX export functionality from browser-based WASM to a backend API call
+- [Fix the height issue of the symbol button](https://x.com/mathcheap/status/1966523092043518424)
+
+## v0.10.1 (2025-09-10)
+
+**improvements**
+
+- [Refactored and optimized the UI](https://x.com/mathcheap/status/1965596222695374993)
+
+## v0.10.0 (2025-09-03)
+
+**Breaking changes**
+
+- [Refactored the UI layout for Symbols and Formulas](https://x.com/shenlu89/status/1963035606008922173)
+
+## v0.9.18 (2025-09-01)
+
+**New features**
+
+- [Add DOCX export support](https://x.com/shenlu89/status/1962417423249764508)
+
+## v0.9.17 (2025-08-29)
+
+**New features**
+
+- [Add Data Management Panel](https://x.com/shenlu89/status/1961261086688125219)
+
+## v0.9.16 (2025-08-08)
+
+**New features**
+
+- [Add PDF export support](https://x.com/shenlu89/status/1953728921784266772)
+
+v0.9.15 (2025-08-07)
+
+**New features**
+
+- [Add "Copy as PNG" functionality](https://x.com/shenlu89/status/1953340041175994870)
+
+**improvements**
+
+- Optimize the code
+
+## v0.9.14 (2025-08-03)
+
+**New features**
+
+- [Add warning popup when localStorage is full](https://x.com/shenlu89/status/1951954956811915538)
+
+## v0.9.13 (2025-07-30)
+
+**New features**
+
+- [Add LaTeX to ASCIIMath conversion feature.](https://x.com/shenlu89/status/1950488428782477622)
+
+## v0.9.12 (2025-07-28)
+
+**New features**
+
+- [Add a collection feature, allowing users to save formulas into collections for future use](https://x.com/shenlu89/status/1949713609463919025)
+
+## v0.9.11 (2025-07-27)
+
+**New features**
+
+- [Add search, sorting, and one-click clear in OCR History](https://x.com/shenlu89/status/1949366485765472413)
+- [Display current browser localStorage usage: used space, usage percentage, remaining space, and total capacity in OCR History]()
+
+**improvements**
+
+- [Replace alerts with popup modals](https://x.com/shenlu89/status/1949366485765472413/photo/2)
+
+## v0.9.10 (2025-07-26)
+
+**New features**
+
+- [Add an Overleaf button (one-click import of LaTeX output into Overleaf)](https://x.com/shenlu89/status/1949136347580735929/photo/1)
+
+**improvements**
+
+- Update the localStorage data structure
+- Optimize the code
+
+## v0.9.9 (2025-07-25)
+
+**New features**
+
+- [Update open graph image](https://x.com/shenlu89/status/1948684583484150053)
+
+## v0.9.8 (2025-07-22)
+
+**New features**
+
+- [Paste (Ctrl+v)  image to upload for OCR](https://x.com/shenlu89/status/1947655586654654699)
+
+## v0.9.7 (2025-07-20)
+
+**New features**
+
+- [Copy button add Typst support](https://x.com/shenlu89/status/1946831410762826151)
+- Typst math formula recognition (OCR image-to-LaTeX conversion, LaTex translate to Typst, indirectly enabling Typst OCR formula recognition)
+
+## v0.9.6 (2025-07-20)
+
+**New features**
+
+- [Add history record function](https://x.com/shenlu89/status/1946829323555549689)
+
+## v0.9.5 (2025-07-18)
+
+**New features**
+
+- [Add text color button (system default color + custom color)](https://x.com/shenlu89/status/1946052658801881234)
+
+## v0.9.3 (2025-07-16)
+
+**New features**
+
+- [Add font family button](https://x.com/shenlu89/status/1945479331536343358)
+
+## v0.9.2 (2025-07-15)
+
+**New features**
+- [Add line break button](https://x.com/shenlu89/status/1944999036047511902/photo/2)
+
+**improvements**
+- [Update image on image upload panel](https://x.com/shenlu89/status/1944999036047511902/photo/1)
+
+
+## v0.9.1 (2025-07-14)
+
+**New features**
+
+- [Add a sponsor button linked to my BuyMeACoffee.](https://x.com/shenlu89/status/1944752680796078126)
+
+## v0.9.0 (2025-07-14)
+
+**New features**
+
+- [Converting math equation images to LaTeX using OCR](https://x.com/shenlu89/status/1944629105762148552)
+
+## v0.8.2 (2024-08-15)
+
+**New features**
+
+- [Prevent overflow in the hover dropdown](https://x.com/shenlu89/status/1823891213281583320)
+
+## v0.5.5 (2024-02-22)
+
+**New features**
+
+- [Dead simple online LaTeX equations editor](https://x.com/shenlu89/status/1760349706901926118/photo/2)
+
+## v0.1.0 (2023-03-01)
+
+**New release**
+
+- Initial release of Mathcheap
