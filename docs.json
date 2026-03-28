@@ -79,12 +79,7 @@
         "label": "Support",
         "href": "mailto:info@mathcheap.xyz"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Home",
-      "href": "https://mathcheap.xyz"
-    }
+    ]
   },
   "contextual": {
     "options": [
