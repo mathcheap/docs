@@ -1,55 +1,51 @@
-# Mintlify Starter Kit
+# Mathcheap Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+This is the official documentation repository for **Mathcheap**, built with [Mintlify](https://mintlify.com).
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+This project contains Mathcheap's guides, custom configurations, and API reference documentation. All pages are MDX files with YAML Frontmatter. Configurations can be managed through `docs.json`.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## Directory Structure
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+- `index.mdx`, `quickstart.mdx`, etc.: Main guides and introductory documentation.
+- `api-reference/`: Contains API reference documentation and endpoint examples (e.g., GET, POST).
+- `essentials/`: Guides on basic configurations like Markdown, code snippets, images, and navigation.
+- `ai-tools/`: Instructions for integrating with various AI tools (like Cursor, Windsurf, Claude Code).
 
-## AI-assisted writing
+## Local Development & Preview
 
-Set up your AI coding tool to work with Mintlify:
+To preview documentation changes locally, you need to install the [Mintlify CLI](https://www.npmjs.com/package/mint). Run the following command to install it:
+
+```bash
+npm i -g mint
+```
+
+After installation, run the following command at the root of your documentation (where `docs.json` is located) to start the local server:
+
+```bash
+mint dev
+```
+
+Once started, you can visit `http://localhost:3000` in your browser to view the local documentation preview in real-time.
+
+## 🤖 AI-assisted Writing
+
+We recommend using Mintlify's AI skill when writing documentation. It includes component references, writing standards, and workflow guidance. Run the following command in your terminal to configure the AI tools:
 
 ```bash
 npx skills add https://mintlify.com/docs
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+> **Note**: This command applies to common AI coding tools like Claude Code, Cursor, and Windsurf. For more configuration details, refer to the [AI tools guides](/ai-tools).
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+## Publishing Changes
 
-## Development
+We use Mintlify's GitHub App for automatic deployment.
+Simply push your changes to the main branch (e.g., `main`). If your [Mintlify Dashboard](https://dashboard.mintlify.com/settings/organization/github-app) is configured correctly, the production environment will automatically pull the latest code and deploy it.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+## Need Help?
 
-```
-npm i -g mint
-```
+- **Local server not running**: Try running `mint update` to ensure you are using the latest version of the Mintlify CLI.
+- **Page shows 404**: Make sure you are running the command in a directory that contains a valid `docs.json` file.
+- **Broken links**: You can run `mint broken-links` locally to check for any invalid links.
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+For more information on how to use Mintlify, please visit the [Mintlify Official Documentation](https://mintlify.com/docs).
