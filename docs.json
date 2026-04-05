@@ -12,14 +12,15 @@
     "tabs": [
       {
         "tab": "Guides",
-        "groups": [
+        "pages": [
           {
             "group": "Getting started",
             "pages": [
               "index",
               "quickstart",
               "development",
-              "changelog"
+              "changelog",
+              "open-source-software-statement"
             ]
           },
           {
